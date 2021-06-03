@@ -1,0 +1,66 @@
+<html>
+<head><title>MY FAMILY BOOK</title></head>
+
+<style>
+    body{
+        text-align: center;
+        background-image: linear-gradient(greenyellow, yellow, aquamarine);
+    }
+
+    h1{
+        color: aliceblue;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    button{
+        background-color: black;
+        color: chartreuse;
+        font-weight: bolder;
+        height: 30px;
+        width: 70px;
+        font-size: 17px;
+    }
+</style>
+
+<body>
+
+<h1>MY FAMILY BOOK</h1>
+
+<img src="images (1).jpg" id="imgs">
+
+<h2 id="m_names">My family</h2>
+
+<button onclick = "update();">NEXT</button>
+<script>
+
+var images = ["images (1).jpg", "images.jpg", "images.png", "download3434.jpg", "download.jpg"];
+
+var names = [
+"My family", "Mom", "Dad", "My younger brother", "Me"];
+
+
+var i = 0;
+function update(){
+
+    i++;
+    var n_o_f_m_in_array = 4
+    if(i > n_o_f_m_in_array)
+    {
+        i = 0;
+    }
+    var uimg = images[i];
+    var uname = names[i];
+    document.getElementById("imgs").src = uimg;
+    document.getElementById("m_names").innerHTML = uname;
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
